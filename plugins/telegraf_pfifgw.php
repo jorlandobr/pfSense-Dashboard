@@ -31,9 +31,6 @@ foreach ($iflist as $ifname => $friendly) {
     if (strtolower($ifstatus) == "associated") {
         $ifstatus = 1;
     }
-        if (strtolower($ifstatus) == "active") {
-        $ifstatus = 1;
-    }
     if (strtolower($ifstatus) == "no carrier") {
         $ifstatus = 0;
     }
