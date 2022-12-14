@@ -27,6 +27,12 @@ foreach ($iflist as $ifname => $friendly) {
     }
     if (strtolower($ifstatus) == "active") {
         $ifstatus = 1;
+    }    
+    if (strtolower($ifstatus) == "associated") {
+        $ifstatus = 1;
+    }
+        if (strtolower($ifstatus) == "active") {
+        $ifstatus = 1;
     }
     if (strtolower($ifstatus) == "no carrier") {
         $ifstatus = 0;
@@ -61,7 +67,7 @@ foreach ($iflist as $ifname => $friendly) {
 
 
     printf(
-        "interface,host=%s,name=%s,ip4_address=%s,ip4_subnet=%s,ip6_address=%s,ip6_subnet=%s,mac_address=%s,friendlyname=%s,source=%s status=%s\n",
+        "interface,host=%s,name=%s,ip4_address=%s,ip4_subnet=%s,ip6_address=%s,ip6_subnet=%s,mac_address=%s,friendlyname=%s,source=%s ifstatus=%s\n",
         $host,
         $realif,
         $ip4addr,
